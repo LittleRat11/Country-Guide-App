@@ -2,7 +2,11 @@ const countryName = document.querySelector("#user-input");
 const search = document.querySelector(".search-btn");
 const resultCountry = document.querySelector("#result");
 search.addEventListener("click", getCountry);
-
+document.body.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        getCountry();
+    }
+})
 // *function getData
 async function getCountry() {
 
